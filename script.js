@@ -1,29 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const today = new Date();
-    const currentDay = today.getDate();
+    // Pega a data atual do sistema do usuário
+    const hoje = new Date();
+    const diaAtual = hoje.getDate();
+    const mesAtual = hoje.getMonth() + 1; // getMonth() retorna de 0 a 11
 
-    let currentWeekId = '';
-    // A lógica para determinar a semana atual com base no dia do mês
-    if (currentDay >= 4 && currentDay <= 8) {
-        currentWeekId = 'semana1';
-    } else if (currentDay >= 11 && currentDay <= 15) {
-        currentWeekId = 'semana2';
-    } else if (currentDay >= 18 && currentDay <= 22) {
-        currentWeekId = 'semana3';
-    } else if (currentDay >= 25 && currentDay <= 29) {
-        currentWeekId = 'semana4';
-    }
+    // Define os intervalos de dias para cada semana de agosto de 2025
+    const semanas = [
+        { id: "semana1", inicio: 4, fim: 8 },
+        { id: "semana2", inicio: 11, fim: 15 },
+        { id: "semana3", inicio: 18, fim: 22 },
+        { id: "semana4", inicio: 25, fim: 29 }
+    ];
 
-    if (currentWeekId) {
-        // Remove a classe highlight de todas as colunas
-        document.querySelectorAll('.button-column').forEach(column => {
-            column.classList.remove('highlight');
+    // Verifica se o mês atual é agosto (mês 8)
+    if (mesAtual === 8) {
+        // Percorre as semanas para encontrar a semana atual
+        semanas.forEach(semana => {
+            if (diaAtual >= semana.inicio && diaAtual <= semana.fim) {
+                const semanaAtualElemento = document.getElementById(semana.id);
+                // Remove a classe 'soon' de todos os botões da semana atual
+                const botoesDaSemana = semanaAtualElemento.querySelectorAll('.soon');
+                botoesDaSemana.forEach(botao => {
+                    const textoOriginal = botao.textContent;
+                    // Remove a parte "- Em Breve!" do texto do botão
+                    botao.textContent = textoOriginal.replace(' - Em Breve!', '');
+                    // Remove a classe 'soon' para que o estilo padrão seja aplicado
+                    botao.classList.remove('soon');
+                    // Remove o atributo title que contém a mensagem "em breve"
+                    botao.removeAttribute('title');
+                });
+            }
         });
-        
-        // Adiciona a classe highlight apenas à coluna da semana atual
-        const currentWeekElement = document.getElementById(currentWeekId);
-        if (currentWeekElement) {
-            currentWeekElement.classList.add('highlight');
-        }
     }
 });
