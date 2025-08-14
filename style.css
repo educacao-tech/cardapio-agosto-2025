@@ -11,6 +11,7 @@
     --creches-color: #ffc107;
     --fundamental-color: #17a2b8;
     --etec-color: #6f42c1;
+    --focus-outline-color: #0056b3;
 }
 
 /* Estilos gerais */
@@ -89,6 +90,12 @@ h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
 }
 
+/* Estilo para as semanas que já passaram */
+.passado {
+    opacity: 0.6;
+    filter: grayscale(80%);
+}
+
 /* Estilo dos botões */
 .button {
     display: block;
@@ -131,6 +138,13 @@ h1 {
 
 .etec { background-color: var(--etec-color); }
 .etec:hover { background-color: #5a2c99; }
+
+/* Estilo para o foco do teclado (acessibilidade) */
+.button:focus {
+    outline: 2px solid var(--focus-outline-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
+}
 
 /* Estilo para os botões "Em Breve" */
 .soon {
