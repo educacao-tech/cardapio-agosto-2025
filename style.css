@@ -33,6 +33,14 @@
     --color-fundamental-5-hover: #28374a;
     --color-fundamental-5-active: #1e2837;
 
+    --color-text-dark: #2c3e50;
+    --color-text-medium: #34495e;
+    --color-background-body: #f0f2f5;
+    --color-background-container: #ffffff;
+    --color-background-column: #fdfdfd;
+    --color-border-subtle: #e0e0e0;
+    --color-border-title: #dde0e3;
+
     /* Sombras */
     --shadow-container: 0 6px 12px rgba(0, 0, 0, 0.1);
     --shadow-column: 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -204,7 +212,7 @@ h1 {
 .button.fundamental-gtl { background-color: var(--color-fundamental-5); }
 .button.fundamental-gtl:hover { background-color: var(--color-fundamental-5-hover); }
 .button.fundamental-gtl:active { background-color: var(--color-fundamental-5-active); }
- 
+ 
 .button.soon {
     background-color: var(--color-soon);
     color: var(--color-soon-text);
