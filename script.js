@@ -20,25 +20,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (diaAtual >= semana.inicio && diaAtual <= semana.fim) {
                     semanaAtualElemento = elemento;
                 } else if (diaAtual > semana.fim) {
+                    // Adiciona a classe 'passado' para semanas que já terminaram
                     elemento.classList.add('passado');
                 }
 
-                // Remove a mensagem "Em Breve!" e a classe 'soon' dos botões da semana atual
+                // Lógica para modificar os botões
                 const botoes = elemento.querySelectorAll('.button');
                 botoes.forEach(botao => {
                     if (diaAtual >= semana.inicio && diaAtual <= semana.fim) {
+                        // Semana atual: remove a mensagem "em breve"
                         if (botao.textContent.includes(' - Em Breve!')) {
                             botao.textContent = botao.textContent.replace(' - Em Breve!', '');
                         }
                         botao.classList.remove('soon');
                         botao.removeAttribute('title');
                     } else if (diaAtual < semana.inicio) {
-                        // Para semanas futuras, mantém a mensagem "Em Breve!" e desabilita o link
+                        // Semanas futuras: mantém a mensagem "em breve" e desabilita o link
                         botao.removeAttribute('href');
                         botao.setAttribute('aria-disabled', 'true');
                     } else {
-                        // Para semanas passadas, o link deve permanecer ativo
-                        botao.classList.remove('soon'); // Garante que o estilo de "em breve" é removido
+                        // Semanas passadas: remove o estilo de "em breve" mas mantém o link
+                        botao.classList.remove('soon');
                     }
                 });
             }

@@ -90,10 +90,15 @@ h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
 }
 
-/* Estilo para as semanas que já passaram */
+/* Estilo para as semanas que já passaram, incluindo o ícone */
 .passado {
     opacity: 0.6;
     filter: grayscale(80%);
+}
+
+.passado .column-title::before {
+    content: '✅ '; /* Adiciona o emoji de check */
+    margin-right: 5px;
 }
 
 /* Estilo dos botões */
