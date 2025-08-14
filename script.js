@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Pega a data atual do sistema do usuário
     const hoje = new Date();
     const diaAtual = hoje.getDate();
-    const mesAtual = hoje.getMonth() + 1; // getMonth() retorna de 0 a 11
+    const mesAtual = hoje.getMonth() + 1;
 
-    // Define os intervalos de dias para cada semana de agosto de 2025
     const semanas = [
         { id: "semana1", inicio: 4, fim: 8 },
         { id: "semana2", inicio: 11, fim: 15 },
@@ -12,24 +10,46 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: "semana4", inicio: 25, fim: 29 }
     ];
 
-    // Verifica se o mês atual é agosto (mês 8)
+    const container = document.querySelector('.columns-container');
+    let semanaAtualElemento = null;
+    let outrosElementos = [];
+
     if (mesAtual === 8) {
-        // Percorre as semanas para encontrar a semana atual
         semanas.forEach(semana => {
-            if (diaAtual >= semana.inicio && diaAtual <= semana.fim) {
-                const semanaAtualElemento = document.getElementById(semana.id);
-                // Remove a classe 'soon' de todos os botões da semana atual
-                const botoesDaSemana = semanaAtualElemento.querySelectorAll('.soon');
-                botoesDaSemana.forEach(botao => {
-                    const textoOriginal = botao.textContent;
-                    // Remove a parte "- Em Breve!" do texto do botão
-                    botao.textContent = textoOriginal.replace(' - Em Breve!', '');
-                    // Remove a classe 'soon' para que o estilo padrão seja aplicado
-                    botao.classList.remove('soon');
-                    // Remove o atributo title que contém a mensagem "em breve"
-                    botao.removeAttribute('title');
-                });
+            const elemento = document.getElementById(semana.id);
+            if (elemento) {
+                if (diaAtual >= semana.inicio && diaAtual <= semana.fim) {
+                    semanaAtualElemento = elemento;
+                    
+                    // Aplica o destaque na semana atual
+                    semanaAtualElemento.classList.add('destaque');
+                    
+                    // Remove a mensagem 'em breve' dos botões
+                    const botoesDaSemana = semanaAtualElemento.querySelectorAll('.soon');
+                    botoesDaSemana.forEach(botao => {
+                        const textoOriginal = botao.textContent;
+                        botao.textContent = textoOriginal.replace(' - Em Breve!', '');
+                        botao.classList.remove('soon');
+                        botao.removeAttribute('title');
+                    });
+                } else {
+                    outrosElementos.push(elemento);
+                }
             }
+        });
+    }
+
+    // Se uma semana atual foi encontrada, move ela para a primeira coluna
+    if (semanaAtualElemento && container) {
+        // Limpa o conteúdo do container
+        container.innerHTML = '';
+        
+        // Adiciona a semana atual no início
+        container.appendChild(semanaAtualElemento);
+        
+        // Adiciona as outras semanas em seguida
+        outrosElementos.forEach(elemento => {
+            container.appendChild(elemento);
         });
     }
 });

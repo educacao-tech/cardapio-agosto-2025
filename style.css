@@ -1,307 +1,146 @@
-/* Variáveis CSS para fácil manutenção e padronização */
+/* Paleta de cores moderna */
 :root {
-    /* Cores */
-    --color-primary: #3498db;
-    --color-primary-hover: #2980b9;
-    --color-primary-active: #1c6aa5;
-    --color-green-creche: #2ecc71;
-    --color-green-creche-hover: #27ae60;
-    --color-green-creche-active: #1d8a4e;
-    --color-orange-creches: #f39c12;
-    --color-orange-creches-hover: #e67e22;
-    --color-orange-creches-active: #d96e0e;
-    --color-purple-etec: #9b59b6;
-    --color-purple-etec-hover: #8e44ad;
-    --color-purple-etec-active: #7a3d91;
-
-    --color-soon: #bdc3c7;
-    --color-soon-text: #666;
-
-    --color-fundamental-1: #3a9ddb;
-    --color-fundamental-1-hover: #2e88c7;
-    --color-fundamental-1-active: #1a6491;
-    --color-fundamental-2: #20c4a2;
-    --color-fundamental-2-hover: #19a68a;
-    --color-fundamental-2-active: #117d65;
-    --color-fundamental-3: #a7b5b6;
-    --color-fundamental-3-hover: #8e9a9b;
-    --color-fundamental-3-active: #717d7e;
-    --color-fundamental-4: #e85a4a;
-    --color-fundamental-4-hover: #c74436;
-    --color-fundamental-4-active: #a72e22;
-    --color-fundamental-5: #34475e;
-    --color-fundamental-5-hover: #28374a;
-    --color-fundamental-5-active: #1e2837;
-
-    --color-text-dark: #2c3e50;
-    --color-text-medium: #34495e;
-    --color-background-body: #f0f2f5;
-    --color-background-container: #ffffff;
-    --color-background-column: #fdfdfd;
-    --color-border-subtle: #e0e0e0;
-    --color-border-title: #dde0e3;
-
-    /* Sombras */
-    --shadow-container: 0 6px 12px rgba(0, 0, 0, 0.1);
-    --shadow-column: 0 3px 8px rgba(0, 0, 0, 0.08);
-    --shadow-button: 0 3px 6px rgba(0, 0, 0, 0.1);
-    --shadow-button-hover: 0 6px 12px rgba(0, 0, 0, 0.2);
-    --shadow-button-active: 0 2px 4px rgba(0, 0, 0, 0.15);
-
-    /* Espaçamentos */
-    --padding-lg: 30px;
-    --padding-md: 20px;
-    --padding-sm: 15px;
-    --gap-lg: 25px;
-    --gap-md: 20px;
-    --gap-sm: 12px;
-
-    /* Raio da Borda (Border-radius) */
-    --border-radius-lg: 12px;
-    --border-radius-md: 10px;
-    --border-radius-sm: 7px;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #343a40;
+    --link-color: #0056b3;
+    --success-color: #28a745;
+    --creche-m-verde-color: #28a745;
+    --creches-color: #ffc107;
+    --fundamental-color: #17a2b8;
+    --etec-color: #6f42c1;
 }
 
-/* Estilos básicos para o layout no Google Sites */
+/* Estilos gerais */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
-    padding: var(--padding-md);
-    background-color: var(--color-background-body);
-    color: var(--color-text-dark);
+    padding: 20px;
     line-height: 1.6;
 }
 
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--padding-lg);
-    background-color: var(--color-background-container);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-container);
+    padding: 20px;
+}
+
+.back-link {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.back-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
 }
 
 h1 {
     text-align: center;
-    color: var(--color-text-dark);
+    color: var(--primary-color);
     margin-bottom: 40px;
-    font-size: 2.8em;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    font-weight: 600;
 }
 
-.back-link {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 1.1em;
-}
-.back-link a {
-    text-decoration: none;
-    color: var(--color-primary);
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.back-link a:hover {
-    background-color: #e8f3fa;
-    color: var(--color-primary-hover);
-}
-
+/* Layout das colunas (Semanas) */
 .columns-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 15px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
+/* Estilo para cada coluna (semana) */
 .button-column {
-    background-color: var(--color-background-column);
-    padding: var(--padding-md);
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-column);
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    gap: var(--gap-sm);
-    transition: all 0.3s ease;
-    border: 1px solid var(--color-border-subtle);
+    align-items: stretch;
+    transition: transform 0.3s ease;
 }
 
-.button-column:hover:not(.highlight) {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+.button-column:hover {
+    transform: translateY(-5px);
 }
 
 .column-title {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
     text-align: center;
-    color: var(--color-text-medium);
-    margin-bottom: var(--padding-md);
-    font-size: 1.6em;
-    font-weight: 600;
-    border-bottom: 2px solid var(--color-border-title);
-    padding-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-weight: 500;
 }
 
+/* Estilo para a semana em destaque */
+.destaque {
+    background-color: #e6f7ff; /* Cor de fundo azul claro */
+    border: 2px solid #007bff; /* Borda azul */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais forte */
+}
+
+/* Estilo dos botões */
 .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     width: 100%;
-    padding: 8px 18px;
-    height: 55px;
-    box-sizing: border-box;
-    background-color: var(--color-primary);
-    color: white;
     text-align: center;
-    text-decoration: none;
-    border-radius: var(--border-radius-sm);
-    font-weight: bold;
-    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+    padding: 15px 10px;
+    margin-bottom: 15px;
     border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
-    box-shadow: var(--shadow-button);
-    font-size: clamp(0.7em, 3.5vw, 1.15em);
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: clip;
-    word-wrap: break-word;
-    line-height: 1.1;
-    hyphens: auto;
+}
+
+.button:last-child {
+    margin-bottom: 0;
 }
 
 .button:hover {
-    background-color: var(--color-primary-hover);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-button-hover);
-}
-.button:active {
-    transform: translateY(0);
-    box-shadow: var(--shadow-button-active);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.button.creche-m-verde { background-color: var(--color-green-creche); }
-.button.creche-m-verde:hover { background-color: var(--color-green-creche-hover); }
-.button.creche-m-verde:active { background-color: var(--color-green-creche-active); }
+/* Estilos de cores para cada tipo de cardápio */
+.creche-m-verde { background-color: var(--creche-m-verde-color); }
+.creche-m-verde:hover { background-color: #218838; }
 
-.button.creches { background-color: var(--color-orange-creches); }
-.button.creches:hover { background-color: var(--color-orange-creches-hover); }
-.button.creches:active { background-color: var(--color-orange-creches-active); }
+.creches { background-color: var(--creches-color); }
+.creches:hover { background-color: #e0a800; }
 
-.button.etec { background-color: var(--color-purple-etec); }
-.button.etec:hover { background-color: var(--color-purple-etec-hover); }
-.button.etec:active { background-color: var(--color-purple-etec-active); }
+.fundamental-braga, .fundamental-anna, .fundamental-aaugusto, .fundamental-esther, .fundamental-gtl {
+    background-color: var(--fundamental-color);
+}
+.fundamental-braga:hover, .fundamental-anna:hover, .fundamental-aaugusto:hover, .fundamental-esther:hover, .fundamental-gtl:hover {
+    background-color: #138496;
+}
 
-.button.fundamental-braga { background-color: var(--color-fundamental-1); }
-.button.fundamental-braga:hover { background-color: var(--color-fundamental-1-hover); }
-.button.fundamental-braga:active { background-color: var(--color-fundamental-1-active); }
+.etec { background-color: var(--etec-color); }
+.etec:hover { background-color: #5a2c99; }
 
-.button.fundamental-anna { background-color: var(--color-fundamental-2); }
-.button.fundamental-anna:hover { background-color: var(--color-fundamental-2-hover); }
-.button.fundamental-anna:active { background-color: var(--color-fundamental-2-active); }
-
-.button.fundamental-aaugusto { background-color: var(--color-fundamental-3); }
-.button.fundamental-aaugusto:hover { background-color: var(--color-fundamental-3-hover); }
-.button.fundamental-aaugusto:active { background-color: var(--color-fundamental-3-active); }
-
-.button.fundamental-esther { background-color: var(--color-fundamental-4); }
-.button.fundamental-esther:hover { background-color: var(--color-fundamental-4-hover); }
-.button.fundamental-esther:active { background-color: var(--color-fundamental-4-active); }
-
-.button.fundamental-gtl { background-color: var(--color-fundamental-5); }
-.button.fundamental-gtl:hover { background-color: var(--color-fundamental-5-hover); }
-.button.fundamental-gtl:active { background-color: var(--color-fundamental-5-active); }
- 
-.button.soon {
-    background-color: var(--color-soon);
-    color: var(--color-soon-text);
+/* Estilo para os botões "Em Breve" */
+.soon {
+    background-color: var(--secondary-color) !important;
     cursor: not-allowed;
-    pointer-events: none;
+    opacity: 0.7;
+    text-decoration: none;
+    transform: none !important;
+}
+
+.soon:hover {
     box-shadow: none;
-    opacity: 0.8;
-}
-.button.soon:hover, .button.soon:active {
-    background-color: var(--color-soon);
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-.button-column.highlight {
-    border: 2px solid #28a745;
-    box-shadow: 0 8px 16px rgba(40, 167, 69, 0.2);
-    background-color: #e9f7eb;
-    transform: translateY(-5px);
-}
-.button-column.highlight .column-title {
-    color: #1a7d32;
-}
-.button-column.highlight:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.25);
-}
-
-@media (max-width: 992px) {
-    .columns-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 12px;
-    }
-    .button {
-        padding: 6px 15px;
-        height: 50px;
-        font-size: clamp(0.65em, 4.5vw, 1em);
-        line-height: 1.0;
-    }
-}
-
-@media (max-width: 600px) {
-    body { padding: var(--padding-sm); }
-    .main-container {
-        padding: var(--padding-md);
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    h1 {
-        font-size: 2em;
-        margin-bottom: 25px;
-    }
-    .back-link {
-        font-size: 1em;
-        margin-bottom: 20px;
-    }
-    .columns-container {
-        grid-template-columns: 1fr;
-        gap: var(--gap-md);
-    }
-    .button-column {
-        padding: var(--padding-sm);
-        gap: 10px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    }
-    .column-title {
-        font-size: 1.4em;
-        margin-bottom: 15px;
-        padding-bottom: 10px;
-    }
-    .button {
-        padding: 10px 15px;
-        height: 50px;
-        border-radius: 6px;
-        font-size: clamp(0.7em, 4.8vw, 1em);
-        line-height: 1.1;
-    }
-    .button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    .button:active {
-        transform: translateY(0);
-        box-shadow: var(--shadow-button-active);
-    }
-    .button.soon { opacity: 0.9; }
-    .button-column.highlight {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(40, 167, 69, 0.15);
-    }
 }
