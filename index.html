@@ -20,10 +20,10 @@
             --color-purple-etec: #9b59b6;
             --color-purple-etec-hover: #8e44ad;
             --color-purple-etec-active: #7a3d91;
-  
+
             --color-soon: #bdc3c7;
             --color-soon-text: #666;
-  
+
             --color-fundamental-1: #3a9ddb;
             --color-fundamental-1-hover: #2e88c7;
             --color-fundamental-1-active: #1a6491;
@@ -39,7 +39,7 @@
             --color-fundamental-5: #34475e;
             --color-fundamental-5-hover: #28374a;
             --color-fundamental-5-active: #1e2837;
-  
+
             --color-text-dark: #2c3e50;
             --color-text-medium: #34495e;
             --color-background-body: #f0f2f5;
@@ -47,14 +47,14 @@
             --color-background-column: #fdfdfd;
             --color-border-subtle: #e0e0e0;
             --color-border-title: #dde0e3;
-  
+
             /* Sombras */
             --shadow-container: 0 6px 12px rgba(0, 0, 0, 0.1);
             --shadow-column: 0 3px 8px rgba(0, 0, 0, 0.08);
             --shadow-button: 0 3px 6px rgba(0, 0, 0, 0.1);
             --shadow-button-hover: 0 6px 12px rgba(0, 0, 0, 0.2);
             --shadow-button-active: 0 2px 4px rgba(0, 0, 0, 0.15);
-  
+
             /* Espaçamentos */
             --padding-lg: 30px;
             --padding-md: 20px;
@@ -62,13 +62,13 @@
             --gap-lg: 25px;
             --gap-md: 20px;
             --gap-sm: 12px;
-  
+
             /* Raio da Borda (Border-radius) */
             --border-radius-lg: 12px;
             --border-radius-md: 10px;
             --border-radius-sm: 7px;
         }
-  
+
         /* Estilos básicos para o layout no Google Sites */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -78,7 +78,7 @@
             color: var(--color-text-dark);
             line-height: 1.6;
         }
-  
+
         .main-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -87,7 +87,7 @@
             border-radius: var(--border-radius-lg);
             box-shadow: var(--shadow-container);
         }
-  
+
         h1 {
             text-align: center;
             color: var(--color-text-dark);
@@ -96,7 +96,7 @@
             font-weight: 700;
             letter-spacing: -0.5px;
         }
-  
+
         .back-link {
             text-align: center;
             margin-bottom: 25px;
@@ -114,14 +114,14 @@
             background-color: #e8f3fa;
             color: var(--color-primary-hover);
         }
-  
+
         .columns-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 15px;
             justify-content: center;
         }
-  
+
         .button-column {
             background-color: var(--color-background-column);
             padding: var(--padding-md);
@@ -133,12 +133,12 @@
             transition: all 0.3s ease;
             border: 1px solid var(--color-border-subtle);
         }
-  
+
         .button-column:hover:not(.highlight) {
             transform: translateY(-2px);
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
         }
-  
+
         .column-title {
             text-align: center;
             color: var(--color-text-medium);
@@ -150,7 +150,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-  
+
         .button {
             display: flex;
             align-items: center;
@@ -177,7 +177,7 @@
             line-height: 1.1;
             hyphens: auto;
         }
-  
+
         .button:hover {
             background-color: var(--color-primary-hover);
             transform: translateY(-3px);
@@ -187,35 +187,35 @@
             transform: translateY(0);
             box-shadow: var(--shadow-button-active);
         }
-  
+
         .button.creche-m-verde { background-color: var(--color-green-creche); }
         .button.creche-m-verde:hover { background-color: var(--color-green-creche-hover); }
         .button.creche-m-verde:active { background-color: var(--color-green-creche-active); }
-  
+
         .button.creches { background-color: var(--color-orange-creches); }
         .button.creches:hover { background-color: var(--color-orange-creches-hover); }
         .button.creches:active { background-color: var(--color-orange-creches-active); }
-  
+
         .button.etec { background-color: var(--color-purple-etec); }
         .button.etec:hover { background-color: var(--color-purple-etec-hover); }
         .button.etec:active { background-color: var(--color-purple-etec-active); }
-  
+
         .button.fundamental-braga { background-color: var(--color-fundamental-1); }
         .button.fundamental-braga:hover { background-color: var(--color-fundamental-1-hover); }
         .button.fundamental-braga:active { background-color: var(--color-fundamental-1-active); }
-  
+
         .button.fundamental-anna { background-color: var(--color-fundamental-2); }
         .button.fundamental-anna:hover { background-color: var(--color-fundamental-2-hover); }
         .button.fundamental-anna:active { background-color: var(--color-fundamental-2-active); }
-  
+
         .button.fundamental-aaugusto { background-color: var(--color-fundamental-3); }
         .button.fundamental-aaugusto:hover { background-color: var(--color-fundamental-3-hover); }
         .button.fundamental-aaugusto:active { background-color: var(--color-fundamental-3-active); }
-  
+
         .button.fundamental-esther { background-color: var(--color-fundamental-4); }
         .button.fundamental-esther:hover { background-color: var(--color-fundamental-4-hover); }
         .button.fundamental-esther:active { background-color: var(--color-fundamental-4-active); }
-  
+
         .button.fundamental-gtl { background-color: var(--color-fundamental-5); }
         .button.fundamental-gtl:hover { background-color: var(--color-fundamental-5-hover); }
         .button.fundamental-gtl:active { background-color: var(--color-fundamental-5-active); }
@@ -233,7 +233,7 @@
             transform: translateY(0);
             box-shadow: none;
         }
-  
+
         .button-column.highlight {
             border: 2px solid #28a745;
             box-shadow: 0 8px 16px rgba(40, 167, 69, 0.2);
@@ -247,7 +247,7 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(40, 167, 69, 0.25);
         }
-  
+
         @media (max-width: 992px) {
             .columns-container {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -260,7 +260,7 @@
                 line-height: 1.0;
             }
         }
-  
+
         @media (max-width: 600px) {
             body { padding: var(--padding-sm); }
             .main-container {
@@ -323,7 +323,7 @@
         <h1>Cardápio Agosto 2025</h1>
 
         <div class="columns-container">
-            <section class="button-column highlight" id="semana1">
+            <section class="button-column" id="semana1">
                 <h2 class="column-title">1ª SEM. - <time datetime="2025-08-04">04</time> a <time datetime="2025-08-08">08/08</time></h2>
                 <a href="https://docs.google.com/document/d/1D_VAwK4hKrI8s-c5pr3fAA0MP6Gr2Ama/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button creche-m-verde" data-type="creche-m-verde" aria-label="Cardápio da Creche Municipal Verde" title="Ver cardápio da Creche Municipal Verde">CRECHE M.VERDE</a>
                 <a href="https://docs.google.com/document/d/1qfjq2lyDqwf-WTbsKKayN9Z3EpRZ9MtI/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button creches" data-type="creches" aria-label="Cardápio das demais Creches" title="Ver cardápio das demais Creches">CRECHES</a>
@@ -334,7 +334,7 @@
                 <a href="https://docs.google.com/document/d/1uGbqHRFpswW-Vd-iL7wYKO4JnDieccGr/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button fundamental-gtl" data-type="fundamental" title="Ver cardápio das escolas: GTL, EESA, Castelo, Washington" aria-label="Cardápio das escolas GTL, EESA, Castelo, Washington">GTL, EESA, CASTELO, WASHINGTON</a>
                 <a href="https://docs.google.com/document/d/1HITXTYE-Kp5u-bdPDmz3K43-F_zn60iF/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button etec" data-type="etec" aria-label="Cardápio da ETEC" title="Ver cardápio da ETEC">ETEC</a>
             </section>
-  
+
             <section class="button-column" id="semana2">
                 <h2 class="column-title">2ª SEM. - <time datetime="2025-08-11">11</time> a <time datetime="2025-08-15">15/08</time></h2>
                 <a href="https://docs.google.com/document/d/18aoxk5Dz1aByK6lw0X3Ec0cJzEAru-dh/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button creche-m-verde soon" data-type="creche-m-verde" aria-label="Cardápio da Creche Municipal Verde - Em Breve!" title="O cardápio será disponibilizado em breve!">CRECHE M.VERDE - Em Breve!</a>
@@ -346,7 +346,7 @@
                 <a href="https://docs.google.com/document/d/1wna6lEs-RpSxI69061tnv90VVJcU7Vr8/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button fundamental-gtl soon" data-type="fundamental" title="Cardápio da 2ª semana será disponibilizado em breve!" aria-label="Cardápio das escolas GTL, EESA, Castelo, Washington - Em Breve!">GTL, EESA, CASTELO, WASHINGTON - Em Breve!</a>
                 <a href="https://docs.google.com/document/d/13XkxZXtm7HstmdUyc6rGefqmyLg5gbeZ/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button etec soon" data-type="etec" aria-label="Cardápio da ETEC - Em Breve!" title="O cardápio será disponibilizado em breve!">ETEC - Em Breve!</a>
             </section>
-  
+
             <section class="button-column" id="semana3">
                 <h2 class="column-title">3ª SEM. - <time datetime="2025-08-18">18</time> a <time datetime="2025-08-22">22/08</time></h2>
                 <a href="https://docs.google.com/document/d/1L1LulSmPrlni5W7EplqDsRdC1O55QAEu/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button creche-m-verde soon" data-type="creche-m-verde" aria-label="Cardápio da Creche Municipal Verde - Em Breve!" title="O cardápio será disponibilizado em breve!">CRECHE M.VERDE - Em Breve!</a>
@@ -358,7 +358,7 @@
                 <a href="https://docs.google.com/document/d/1GdRxjMmSR_LaeW0L_RvFewvrdZq99zLm/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button fundamental-gtl soon" data-type="fundamental" title="Cardápio da 3ª semana será disponibilizado em breve!" aria-label="Cardápio das escolas GTL, EESA, Castelo, Washington - Em Breve!">GTL, EESA, CASTELO, WASHINGTON - Em Breve!</a>
                 <a href="https://docs.google.com/document/d/1kdgwO1sJSIhItj3_MN6vxMJl3vHTSTNJ/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button etec soon" data-type="etec" aria-label="Cardápio da ETEC - Em Breve!" title="O cardápio será disponibilizado em breve!">ETEC - Em Breve!</a>
             </section>
-  
+
             <section class="button-column" id="semana4">
                 <h2 class="column-title">4ª SEM. - <time datetime="2025-08-25">25</time> a <time datetime="2025-08-29">29/08</time></h2>
                 <a href="https://docs.google.com/document/d/1NbmZMUT9z4Cil3ujXCEBaEyofLXV173x/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button creche-m-verde soon" data-type="creche-m-verde" aria-label="Cardápio da Creche Municipal Verde - Em Breve!" title="O cardápio será disponibilizado em breve!">CRECHE M.VERDE - Em Breve!</a>
@@ -370,8 +370,49 @@
                 <a href="https://docs.google.com/document/d/1X_2SRP40IGC0B7FuqGXUckI0gZE2y3tw/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button fundamental-gtl soon" data-type="fundamental" title="Cardápio da 4ª semana será disponibilizado em breve!" aria-label="Cardápio das escolas GTL, EESA, Castelo, Washington - Em Breve!">GTL, EESA, CASTELO, WASHINGTON - Em Breve!</a>
                 <a href="https://docs.google.com/document/d/1p8_L8DwfRdnea8izwLsvjiy4NppaPhlM/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" class="button etec soon" data-type="etec" aria-label="Cardápio da ETEC - Em Breve!" title="O cardápio será disponibilizado em breve!">ETEC - Em Breve!</a>
             </section>
-  
+
         </div>
     </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const today = new Date();
+            const currentMonth = today.getMonth(); // Janeiro = 0, Agosto = 7
+            const currentYear = today.getFullYear();
+            
+            if (currentMonth === 7 && currentYear === 2025) {
+                const currentDay = today.getDate();
+                let currentWeekId = '';
+
+                if (currentDay >= 4 && currentDay <= 8) {
+                    currentWeekId = 'semana1';
+                } else if (currentDay >= 11 && currentDay <= 15) {
+                    currentWeekId = 'semana2';
+                } else if (currentDay >= 18 && currentDay <= 22) {
+                    currentWeekId = 'semana3';
+                } else if (currentDay >= 25 && currentDay <= 29) {
+                    currentWeekId = 'semana4';
+                }
+
+                if (currentWeekId) {
+                    document.querySelectorAll('.button-column').forEach(column => {
+                        column.classList.remove('highlight');
+                    });
+                    const currentWeekElement = document.getElementById(currentWeekId);
+                    
+                    if (currentWeekElement) {
+                        currentWeekElement.classList.add('highlight');
+                        
+                        currentWeekElement.querySelectorAll('.button.soon').forEach(button => {
+                            button.classList.remove('soon');
+                            button.textContent = button.textContent.replace(' - Em Breve!', '');
+                            const originalTitle = button.getAttribute('title').replace(' - Em Breve!', '');
+                            button.setAttribute('title', originalTitle);
+                        });
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
