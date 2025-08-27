@@ -112,7 +112,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+    /* Animação de entrada */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out,
+                box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .column-title {
@@ -123,6 +127,12 @@ body {
     text-align: center;
     border-bottom: 2px solid var(--background-color);
     padding-bottom: 0.75rem;
+}
+
+/* Classe para ativar a animação quando o elemento está visível */
+.button-column.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Estilos dos Botões de Cardápio */

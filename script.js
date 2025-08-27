@@ -115,4 +115,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carrega o tema assim que o DOM estiver pronto
     loadTheme();
+
+    // --- Lógica para Animação de Entrada das Colunas ---
+    const observerOptions = {
+        root: null, // Observa em relação ao viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Ativa quando 10% do item estiver visível
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Para a observação após a animação
+            }
+        });
+    }, observerOptions);
+
+    // Observa cada coluna de cardápio
+    document.querySelectorAll('.button-column').forEach(column => observer.observe(column));
 });
